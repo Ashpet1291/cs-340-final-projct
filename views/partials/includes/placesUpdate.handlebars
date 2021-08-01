@@ -1,0 +1,30 @@
+<h1>Update places</h1>
+
+<div class="container">
+    <form action="/action_page.php">
+        <fieldset>
+            <h2 style="font-size:20px;">Add a new Place to Remember</h2>
+
+            <label for="pname">Name of Place:</label><br>
+            <input type="text" id="pname" name="fname" value="Pike Place Market"><br>
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" value="1901 Western Ave. Settle, WA"><br>
+            <label for="website">Website:</label><br>
+            <input type="search" id="website" name="website" value="pikeplacemarket.org"><br><br>
+            <label for="parentname">Associated Place (parent_name):</label><br>
+            <input type="text" id="parentname" name="parentname" value="Seattle"><br><br>
+            <label for="indoors">Indoors:</label>
+            <select id="indoors" name="indoors">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="undercover">Undercover/outside</option>
+            </select><br><br>
+            <label for="pnotes">Extra Notes:</label><br>
+            <textarea name="message" rows="10" cols="30">
+   I really liked the flowers at the third booth
+  </textarea>
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</div>
