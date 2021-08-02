@@ -36,6 +36,10 @@ app.get('/item', (req, res) => {
     res.render('item', {layout: 'index'});
 });
 
+app.get('/places', (req, res) => {
+    res.render('item', {layout: 'index'});
+});
+
 app.use(function(req, res){
     res.status(404);
     res.render('404');
