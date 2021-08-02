@@ -25,19 +25,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/announcements', (req, res) => {
-    res.render('announcements', {layout: 'index'});
+    res.render('announcementsDisplay', {layout: 'index'});
 });
 
 app.get('/familyMembers', (req, res) => {
-    res.render('familyMembers', {layout: 'index'});
+    res.render('familyMembersDisplay', {layout: 'index'});
 });
 
 app.get('/item', (req, res) => {
-    res.render('item', {layout: 'index'});
+    res.render('itemDisplay', {layout: 'index'});
 });
 
 app.get('/places', (req, res) => {
-    res.render('item', {layout: 'index'});
+    res.render('placesDisplay', {layout: 'index'});
 });
 
 app.use(function(req, res){
