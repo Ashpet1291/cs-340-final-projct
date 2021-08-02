@@ -11,5 +11,12 @@
     "url": "github.com/Ashpet1291/cs-340-final-projct"
   },
   "author": "Ashley Pettibone and Michael Uchmanowicz",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "forever": "^4.0.1",
+    "handlebars": "^4.7.7"
+  }
 }
