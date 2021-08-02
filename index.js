@@ -1,3 +1,5 @@
+// Setup
+
 const express = require('express');
 const hbs = require('express-handlebars');
 const path = require("path");
@@ -16,10 +18,13 @@ app.engine('hbs', hbs({
 app.set('view engine', 'hbs');
 
 
+// Database
+const db = require('./database/db-connector');
+
 app.use(express.static('img'));
 app.use(express.static('public'));
 
-
+// Main Pages
 app.get('/', (req, res) => {
     res.render('main', {layout: 'index'});
 });
@@ -40,6 +45,16 @@ app.get('/places', (req, res) => {
     res.render('placesDisplay', {layout: 'index'});
 });
 
+// Create Routes
+
+
+
+// Update Routes
+
+// Delete Routes
+
+
+// Error Pages
 app.use(function(req, res){
     res.status(404);
     res.render('404');
