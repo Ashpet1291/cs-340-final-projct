@@ -24,16 +24,16 @@ app.get('/', (req, res) => {
     res.render('main', {layout: 'index'});
 });
 
-app.get('/thinkers', (req, res) => {
-    res.render('thinkers', {layout: 'index'});
+app.get('/announcements', (req, res) => {
+    res.render('announcements', {layout: 'index'});
 });
 
-app.get('/philosophy', (req, res) => {
-    res.render('philosophy', {layout: 'index'});
+app.get('/familyMembers', (req, res) => {
+    res.render('familyMembers', {layout: 'index'});
 });
 
-app.get('/orgs', (req, res) => {
-    res.render('orgs', {layout: 'index'});
+app.get('/item', (req, res) => {
+    res.render('item', {layout: 'index'});
 });
 
 app.use(function(req, res){
