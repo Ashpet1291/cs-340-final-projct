@@ -47,7 +47,7 @@ app.get('/places', (req, res) => {
 
 // Create Routes
 
-
+// Read Routes
 
 // Update Routes
 
