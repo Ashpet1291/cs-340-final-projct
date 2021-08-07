@@ -30,19 +30,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/announcements', (req, res) => {
-    res.render('announcementsDisplay', {layout: 'index'});
+    res.render('announcementsMain', {layout: 'index'});
 });
 
 app.get('/familyMembers', (req, res) => {
-    res.render('familyMembersDisplay', {layout: 'index'});
+    res.render('familyMembersMain', {layout: 'index'});
 });
 
-app.get('/item', (req, res) => {
-    res.render('itemDisplay', {layout: 'index'});
+app.get('/items', (req, res) => {
+    res.render('itemMain', {layout: 'index'});
 });
 
 app.get('/places', (req, res) => {
-    res.render('placesDisplay', {layout: 'index'});
+    res.render('placesMain', {layout: 'index'});
 });
 
 // Create Routes
