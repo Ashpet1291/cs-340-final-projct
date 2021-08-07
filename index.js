@@ -12,7 +12,7 @@ app.engine('hbs', hbs({
     layoutsDir: __dirname + '/views/layouts',
     extname: 'hbs',
     defaultLayout: 'index',
-    partialsDir: __dirname + '/views/partials/',
+    partialsDir: __dirname + '/views/partials/includes/',
 }));
 
 app.set('view engine', 'hbs');
