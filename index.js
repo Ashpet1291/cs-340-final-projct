@@ -21,7 +21,6 @@ app.set('view engine', 'hbs');
 // Database
 const db = require('./database/db-connector');
 
-app.use(express.static(__dirname +'/img'));
 app.use(express.static(__dirname +'/public'));
 
 // Main Pages
