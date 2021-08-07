@@ -38,7 +38,7 @@ app.get('/familyMembers', (req, res) => {
 });
 
 app.get('/items', (req, res) => {
-    res.render('itemMain', {layout: 'index'});
+    res.render('itemsMain', {layout: 'index'});
 });
 
 app.get('/places', (req, res) => {
