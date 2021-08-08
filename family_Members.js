@@ -2,30 +2,20 @@ module.exports = function(){
     var express = require('express');
     var router = express.Router();
 
-    function getPlanets(res, mysql, context, complete){
-        mysql.pool.query("SELECT id, name FROM bsg_planets", function(error, results, fields){
-            if(error){
-                res.write(JSON.stringify(error));
-                res.end();
-            }
-            context.planets  = results;
-            complete();
-        });
-    }
-
+  
     function getfamilyMembers(res, mysql, context, complete){
-        mysql.pool.query("SELECT bsg_people.id, fname, lname, bsg_planets.name AS homeworld, age FROM bsg_people INNER JOIN bsg_planets ON homeworld = bsg_planets.id", function(error, results, fields){
+        mysql.pool.query("SELECT family_id, first_name, nick_name, last_name, birthday, primary_number, function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
                 res.end();
             }
-            context.people = results;
+            context.family_Members = results;
             complete();
         });
     }
 
-    function getPerson(res, mysql, context, id, complete){
-        var sql = "SELECT id, fname, lname, homeworld, age FROM bsg_people WHERE id = ?";
+    function getfamilyMember(res, mysql, context, id, complete){
+        var sql = "SELECT family_id, first_name, nick_name, last_name, birthday, primary_number FROM Family_Members WHERE family_id = ?";
         var inserts = [id];
         mysql.pool.query(sql, inserts, function(error, results, fields){
             if(error){
