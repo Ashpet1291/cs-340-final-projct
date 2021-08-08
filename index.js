@@ -24,6 +24,12 @@ const db = require('./database/db-connector');
 app.use(express.static(__dirname +'/public'));
 
 // Main Pages
+
+app.use('/familyMembers', require('./family_Members.js'));
+app.use('/announcements', require('./announcements.js'));
+app.use('/item', require('./items.js'));
+app.use('/places', require('./places.js'));
+
 app.get('/', (req, res) => {
     res.render('main', {layout: 'index'});
 });
