@@ -2,17 +2,19 @@ module.exports = function(){
     var express = require('express');
     var router = express.Router();
 
-  
     function getfamilyMembers(res, mysql, context, complete){
-        mysql.pool.query("SELECT family_id, first_name, nick_name, last_name, birthday, primary_number from Family_Members";
-            if(error){
-                res.write(JSON.stringify(error));
-                res.end();
-            }
-            context.familyMembers = results;
-            complete();
-        });
-    }
+        var sql = ("SELECT family_id, first_name, nick_name, last_name, birthday, primary_number from Family_Members";
+        mysql.pool.query(sql)
+        if(error){
+            res.write(JSON.stringify(error));
+            res.end();
+        }
+        context.familyMembers = results;
+        complete();
+    });
+}
+
+
     function getfamilyMember(res, mysql, context, id, complete){
         var sql = "SELECT family_id, first_name, nick_name, last_name, birthday, primary_number FROM Family_Members WHERE family_id = ?";
         var inserts = [id];
