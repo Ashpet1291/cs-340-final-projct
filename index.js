@@ -51,7 +51,7 @@ app.get('/places', (req, res) => {
 // Update Routes
 
 // Delete Routes
-    app.delete('/:id', function(req, res){
+    app.delete('Family_Members/:id', function(req, res){
         var mysql = req.app.get('mysql');
         var sql = "DELETE FROM Family_Members WHERE id = ?";
         var inserts = [req.params.id];
@@ -69,7 +69,7 @@ app.get('/places', (req, res) => {
     return app;
 }();
 
-    app.delete('/:id', function(req, res){
+    app.delete('/places/:id', function(req, res){
         var mysql = req.app.get('mysql');
         var sql = "DELETE FROM Places WHERE id = ?";
         var inserts = [req.params.id];
@@ -87,7 +87,7 @@ app.get('/places', (req, res) => {
     return app;
 }();
 
-    app.delete('/:id', function(req, res){
+    app.delete('/announcements/:id', function(req, res){
         var mysql = req.app.get('mysql');
         var sql = "DELETE FROM Announcements WHERE id = ?";
         var inserts = [req.params.id];
