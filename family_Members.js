@@ -13,7 +13,7 @@ module.exports = function(){
         });
     }
 
-    function getPeople(res, mysql, context, complete){
+    function getfamilyMembers(res, mysql, context, complete){
         mysql.pool.query("SELECT bsg_people.id, fname, lname, bsg_planets.name AS homeworld, age FROM bsg_people INNER JOIN bsg_planets ON homeworld = bsg_planets.id", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
@@ -108,9 +108,9 @@ module.exports = function(){
 
     /* Route to delete a person, simply returns a 202 upon success. Ajax will handle this. */
 
-    router.delete('/:family_id', function(req, res){
+    router.delete('/:id', function(req, res){
         var mysql = req.app.get('mysql');
-        var sql = "DELETE FROM Family_Members WHERE id = ?";
+        var sql = "DELETE FROM Family_Members WHERE family_id= ?";
         var inserts = [req.params.id];
         sql = mysql.pool.query(sql, inserts, function(error, results, fields){
             if(error){
