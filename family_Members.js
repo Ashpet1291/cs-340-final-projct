@@ -108,7 +108,7 @@ module.exports = function(){
 
     /* Route to delete a person, simply returns a 202 upon success. Ajax will handle this. */
 
-    router.delete('/:id', function(req, res){
+    router.delete('/:family_id', function(req, res){
         var mysql = req.app.get('mysql');
         var sql = "DELETE FROM Family_Members WHERE id = ?";
         var inserts = [req.params.id];
