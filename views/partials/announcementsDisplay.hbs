@@ -2,25 +2,20 @@
 
 <div class="container" style="margin-top: 40px">
     <div class="row">
+        {{#each announcement}}
         <div class="col-sm">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Announcement 1</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Update/Delete</a>
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">{{text}}</p>
+                    <button type="button" class="btn btn-primary btn-sm">Update</button>
+                    <button type="button" class="btn btn-primary btn-sm">Delete</button>
+                    <a href="/announcements/{{announcement_id}}" class="btn btn-primary">Update</a>
+                    <a href="/announcements/{{announcement_id}}" class="btn btn-warning">Delete</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Announcement 2</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Update/Delete</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                {{/each}}
 </div>
 
 <div>
