@@ -3,8 +3,8 @@ module.exports = function(){
     var router = express.Router();
 
     function getfamilyMembers(res, mysql, context, complete){
-        var sql = ("SELECT family_id, first_name, nick_name, last_name, birthday, primary_number from Family_Members";
-        mysql.pool.query(sql)
+        var sql = ("SELECT family_id, first_name, nick_name, last_name, birthday, primary_number from Family_Members"
+        mysql.pool.query(sql, inserts, function(error, results, fields){
         if(error){
             res.write(JSON.stringify(error));
             res.end();
