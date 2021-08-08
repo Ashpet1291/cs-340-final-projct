@@ -8,7 +8,7 @@ const pool = mysql.createPool({
     host            : 'classmysql.engr.oregonstate.edu',
     user            : 'uchmanom',
     password        : 'Ender1576!',
-    database        : ''
+    database        : 'cs340_uchmanom'
 })
 
 // Export it for use in our application

@@ -67,7 +67,6 @@ app.get('/places', (req, res) => {
     })
 
     return app;
-}();
 
     app.delete('/places/:id', function(req, res){
         var mysql = req.app.get('mysql');
@@ -85,7 +84,7 @@ app.get('/places', (req, res) => {
     })
 
     return app;
-}();
+;
 
     app.delete('/announcements/:id', function(req, res){
         var mysql = req.app.get('mysql');
@@ -103,7 +102,7 @@ app.get('/places', (req, res) => {
     })
 
     return app;
-}();
+
 
 // Error Pages
 app.use(function(req, res){
