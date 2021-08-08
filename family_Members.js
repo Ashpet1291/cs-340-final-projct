@@ -4,7 +4,7 @@ module.exports = function(){
 
   
     function getfamilyMembers(res, mysql, context, complete){
-        mysql.pool.query("SELECT family_id, first_name, nick_name, last_name, birthday, primary_number, function(error, results, fields){
+        mysql.pool.query("SELECT family_id, first_name, nick_name, last_name, birthday, primary_number", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
                 res.end();
