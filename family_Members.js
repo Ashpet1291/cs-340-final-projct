@@ -9,7 +9,7 @@ module.exports = function(){
                 res.write(JSON.stringify(error));
                 res.end();
             }
-            context.family_Members = results;
+            context.familyMembers = results;
             complete();
         });
     }
@@ -22,7 +22,7 @@ module.exports = function(){
                 res.write(JSON.stringify(error));
                 res.end();
             }
-            context.person = results[0];
+            context.familyMember = results[0];
             complete();
         });
     }
