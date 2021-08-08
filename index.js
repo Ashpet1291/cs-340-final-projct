@@ -51,57 +51,7 @@ app.get('/places', (req, res) => {
 // Update Routes
 
 // Delete Routes
-    app.delete('Family_Members/:id', function(req, res){
-        var mysql = req.app.get('mysql');
-        var sql = "DELETE FROM Family_Members WHERE id = ?";
-        var inserts = [req.params.id];
-        sql = mysql.pool.query(sql, inserts, function(error, results, fields){
-            if(error){
-                res.write(JSON.stringify(error));
-                res.status(400);
-                res.end();
-            }else{
-                res.status(202).end();
-            }
-        })
-    })
 
-    return app;
-
-    app.delete('/places/:id', function(req, res){
-        var mysql = req.app.get('mysql');
-        var sql = "DELETE FROM Places WHERE id = ?";
-        var inserts = [req.params.id];
-        sql = mysql.pool.query(sql, inserts, function(error, results, fields){
-            if(error){
-                res.write(JSON.stringify(error));
-                res.status(400);
-                res.end();
-            }else{
-                res.status(202).end();
-            }
-        })
-    })
-
-    return app;
-;
-
-    app.delete('/announcements/:id', function(req, res){
-        var mysql = req.app.get('mysql');
-        var sql = "DELETE FROM Announcements WHERE id = ?";
-        var inserts = [req.params.id];
-        sql = mysql.pool.query(sql, inserts, function(error, results, fields){
-            if(error){
-                res.write(JSON.stringify(error));
-                res.status(400);
-                res.end();
-            }else{
-                res.status(202).end();
-            }
-        })
-    })
-
-    return app;
 
 
 // Error Pages
